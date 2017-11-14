@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>仿淘宝五星评价点击(纯CSS-css3)</title>
+<link rel="stylesheet" type="text/css" href="./css/css.css">
+<style type="text/css">
+html {width:100%; height:100%;}
+body {margin:0; padding:0; width:100%; overflow-x:hidden; height:100%; overflow-y:auto; font-family:"microsoft yahei"; font-size:14px;}
+ul,ol,li,dl,dt,dd,label {margin:0; padding:0; list-style:none; border:none; outline:none; font-family:"microsoft yahei";}
+.clearfix:before, .clearfix:after {content:""; display:table;}
+.clearfix:after  {clear:both;}
+
+/*========== 相关样式代码 ==========*/
+.joedar {position:absolute; width:250px; height:50px; top:50%; margin-top:-25px; left:50%; margin-left:-125px;}
+.joedar > input[type="radio"] {position:fixed; left:-9999px; top:50%;}
+.joedar > label {position:absolute; width:50px; height:50px; top:0; z-index:3; cursor:pointer;}
+.joedar > label[for="star1"] {left:0;}
+.joedar > label[for="star2"] {left:50px;}
+.joedar > label[for="star3"] {left:100px;}
+.joedar > label[for="star4"] {left:150px;}
+.joedar > label[for="star5"] {left:200px;}
+.joedar > .star {position:absolute; width:100%; height:100%; left:0; top:0; background:url(./img/stars.gif) left top no-repeat;}
+.joedar > .star.s1 {background-position:0 -50px;}
+.joedar > .star.s2 {background-position:0 -100px;}
+.joedar > .star.s3 {background-position:0 -150px;}
+.joedar > .star.s4 {background-position:0 -200px;}
+.joedar > .star.s5 {background-position:0 -250px;}
+.joedar > .star {visibility:hidden;}
+.joedar > .star.s0 {visibility:visible;}
+.joedar > label:hover ~ .star.s0 {visibility:hidden;}
+.joedar > label[for="star1"]:hover ~ .star.s1,
+.joedar > input[type="radio"]#star1:checked ~ .star.s1,
+.joedar > label[for="star2"]:hover ~ .star.s2,
+.joedar > input[type="radio"]#star2:checked ~ .star.s2,
+.joedar > label[for="star3"]:hover ~ .star.s3,
+.joedar > input[type="radio"]#star3:checked ~ .star.s3,
+.joedar > label[for="star4"]:hover ~ .star.s4,
+.joedar > input[type="radio"]#star4:checked ~ .star.s4,
+.joedar > label[for="star5"]:hover ~ .star.s5,
+.joedar > input[type="radio"]#star5:checked ~ .star.s5 {visibility:visible;}
+</style>
+</head>
+<body>
+<div class="joedar clearfix">
+	<input type="radio" name="star" id="star1">
+	<input type="radio" name="star" id="star2">
+	<input type="radio" name="star" id="star3">
+	<input type="radio" name="star" id="star4">
+	<input type="radio" name="star" id="star5">
+	<label for="star1"></label>
+	<label for="star2"></label>
+	<label for="star3"></label>
+	<label for="star4"></label>
+	<label for="star5"></label>
+	<div class="star s0"></div>
+	<div class="star s1"></div>
+	<div class="star s2"></div>
+	<div class="star s3"></div>
+	<div class="star s4"></div>
+	<div class="star s5"></div>
+</div>
+</body>
+</html>
